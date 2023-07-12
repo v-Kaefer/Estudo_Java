@@ -13,6 +13,7 @@ public class cartasNaipes {
         }
 
         // Seleção do Naipe da 1° Carta
+        // qualquer coisa
         System.out.println("Insira o naipe da 1° carta. Sendo:\n6 = PAUS, 7 = OUROS, 8 = COPAS & 9 = ESPADAS\n");
         int naipeA = input.nextInt(); 
         String naipeASel ="";
@@ -102,7 +103,7 @@ public class cartasNaipes {
             System.out.print("As cartas NÃO formam uma Sequência Simples ");
         }
         
-        // d) Se formam uma sequencia premium
+        
         if (naipeASel == naipeBSel) {
             System.out.println("e, formam uma Sequência Premium!");
         }

@@ -1,4 +1,5 @@
 // 6° Semana - Exercício Avaliativo
+
 import java.util.Scanner;
 public class cartasNaipes {
     public static void main (String[] args) {

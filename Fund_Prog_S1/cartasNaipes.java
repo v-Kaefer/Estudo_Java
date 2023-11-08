@@ -1,3 +1,5 @@
+package Fund_Prog_S1;
+
 // 6° Semana - Exercício Avaliativo
 
 import java.util.Scanner;

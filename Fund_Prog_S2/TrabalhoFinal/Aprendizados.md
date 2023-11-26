@@ -1,0 +1,3 @@
+Sim, em geral, os métodos "set" em Java (ou em outras linguagens que seguem convenções semelhantes) são projetados para receber um valor como argumento e atribuí-lo à variável correspondente da classe. No seu exemplo, o método setLado da classe Quadrado recebe um novo valor (novoLado) e o atribui à variável lado da instância.
+
+Então, sim, você pode usar um método "set" para atribuir um novo valor a uma variável sem inicializá-la diretamente na declaração da variável. O método "set" é projetado para essa finalidade, permitindo a modificação do estado do objeto após sua criação. Isso é especialmente útil quando você precisa alterar os valores dos atributos de um objeto em tempo de execução com base em diferentes condições ou entrada do usuário, como no seu exemplo.

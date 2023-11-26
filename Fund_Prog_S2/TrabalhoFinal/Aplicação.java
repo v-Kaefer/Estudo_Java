@@ -17,10 +17,13 @@ import java.util.Scanner;
 Implemente ainda uma classe Aplicação com um menu de opções (com as operações da lista).
 */
 public class Aplicação {
+
+    
     public static void main (String args[]) {
         // Declaração do array, [x][y], x = 6 vars && y = total pacientes
-        //double [] listaPacientes = new double[];
-        
+        double [] listaPacientes = new double[2];
+
+
         System.out.println("LISTA DE PACIENTES\n");
         System.out.println("1 - Consultar paciente por nome.");
         System.out.println("2 - Consultar paciente por código.");
@@ -33,7 +36,7 @@ public class Aplicação {
         System.out.println("9 - Mostra o IMC de um paciente.");
         System.out.println("0 - Sair");
         
-        int option = 0;
+        int option;
         
         switch (option) {
             case 1: 
@@ -49,7 +52,7 @@ public class Aplicação {
                 System.out.println("Todos os Pacientes :" + getPacienteTodos());
                 break;
             case 5:
-                setPacienteNovo();
+                Clinica.adicionarNovoPaciente();
                 break;
             case 6:
                 System.out.println("Alterando peso do paciente: "+getPacienteCodigo());

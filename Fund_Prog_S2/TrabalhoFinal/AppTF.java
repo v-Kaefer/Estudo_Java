@@ -16,18 +16,27 @@ import java.util.Scanner;
 
 Implemente ainda uma classe Aplicação com um menu de opções (com as operações da lista).
 */
-public class Aplicação {
+public class AppTF {
+    Scanner input = new Scanner(System.in);
+    private String nome, sexo;
+    private int codigo, idade;
+    private double altura, peso;
+    private double imc;
+    private int nPacientes;
 
-    
-    public static void main (String args[]) {
-        // Declaração do array, [x][y], x = 6 vars && y = total pacientes
-        double [] listaPacientes = new double[2];
+    public void main (String args[]) {
+        //ListaPacientes listaPacientes = new ListaPacientes(2);        
+        
+        int option;
 
-        Aplicação.menuOptions();
-        Aplicação.menuSelect();
+        do {
+            menuOptions();
+            option = input.nextInt();
+            menuSelect(option);
+        } while (option != 0);
     }
 
-    public static void menuOptions () {
+    public void menuOptions () {
         System.out.println("LISTA DE PACIENTES\n");
         System.out.println("1 - Consultar paciente por nome.");
         System.out.println("2 - Consultar paciente por código.");
@@ -41,36 +50,42 @@ public class Aplicação {
         System.out.println("0 - Sair");
     }
 
-    public void menuSelect() {
-        int option;
+    public void menuSelect(int option) {
         
         switch (option) {
             case 1: 
-                System.out.println("Paciente: " + getPacienteNome());
+                System.out.println("Insira o nome do Paciente desejado:");
+                nome = input.nextLine();
+                ListaPacientes.consultarPorNome(nome);
+                if (paciente != null) {
+                    System.out.println("Paciente encontrado: " + paciente);
+                } else {
+                    System.out.println("Paciente não encontrado.");
+                }
                 break;
             case 2: 
-                System.out.println("Consulta por código: " + getPacienteCodigo());
+                System.out.println("Consulta por código: ");
                 break;
             case 3:
-                System.out.println("Pacientes a partir da idade: "+ getPacienteIdade());
+                System.out.println("Pacientes a partir da idade: ");
                 break;
             case 4:
-                System.out.println("Todos os Pacientes :" + getPacienteTodos());
+                System.out.println("Todos os Pacientes :");
                 break;
             case 5:
-                Clinica.adicionarNovoPaciente();
+                
                 break;
             case 6:
-                System.out.println("Alterando peso do paciente: "+getPacienteCodigo());
+                System.out.println("Alterando peso do paciente: ");
                 break;
             case 7:
-                System.out.println("Alterando altura do paciente: "+getPacienteCodigo());
+                System.out.println("Alterando altura do paciente: ");
                 break;
             case 8:
-                System.out.println("Alterando sexo do paciente: "+getPacienteCodigo());
+                System.out.println("Alterando sexo do paciente: ");
                 break;
             case 9:
-                System.out.println("Mostrando IMC do paciente: "+getPacienteIMC());
+                System.out.println("Mostrando IMC do paciente: ");
                 break;
             case 0:
                 System.out.println("Saindo");

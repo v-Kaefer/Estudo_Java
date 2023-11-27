@@ -10,7 +10,6 @@ public class Paciente {
     private double altura, peso;
     public double imc;
     public int nPacientes;
-    private Paciente[] pacientes;
 
 
     // MÉTODO CONSTRUTOR -- OK
@@ -122,6 +121,24 @@ public class Paciente {
     }
 
 
+    // Método toString
+
+    public String toString() {
+        return "Paciente { "+
+                "codigo="+ codigo +
+                ", nome= "+ nome +'\'' +
+                ", sexo=" + sexo +
+                ", peso=" + peso +
+                ", altura=" + altura +
+                ", idade=" + idade +
+                '}';
+    }
+}
+
+
+
+    /*
+
     public static void registraPaciente () {
         String nome, sexo;
         int codigo, idade;
@@ -132,7 +149,7 @@ public class Paciente {
     /** 
     - método que cadastra pacientes na lista. 
         O método deve garantir que nenhum paciente de mesmo nome e codigo sejam adicionados a lista de pacientes.
-    */
+    /
 }
 
 
@@ -149,3 +166,4 @@ public class Paciente {
             System.out.println("Limite de pacientes atingido!");
         }
     }
+    */

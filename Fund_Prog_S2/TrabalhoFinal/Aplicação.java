@@ -23,7 +23,11 @@ public class Aplicação {
         // Declaração do array, [x][y], x = 6 vars && y = total pacientes
         double [] listaPacientes = new double[2];
 
+        Aplicação.menuOptions();
+        Aplicação.menuSelect();
+    }
 
+    public static void menuOptions () {
         System.out.println("LISTA DE PACIENTES\n");
         System.out.println("1 - Consultar paciente por nome.");
         System.out.println("2 - Consultar paciente por código.");
@@ -35,7 +39,9 @@ public class Aplicação {
         System.out.println("8 - Alterar o sexo de um paciente, informando seu código.");
         System.out.println("9 - Mostra o IMC de um paciente.");
         System.out.println("0 - Sair");
-        
+    }
+
+    public void menuSelect() {
         int option;
         
         switch (option) {
@@ -76,4 +82,3 @@ public class Aplicação {
         }
     }
 }
-

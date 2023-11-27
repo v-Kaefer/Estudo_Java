@@ -1,6 +1,7 @@
 package Fund_Prog_S2.TrabalhoFinal;
 
 import java.util.Scanner;
+
 public class Clinica {
     private Paciente[] pacientes;
     private int nPacientes;
@@ -13,7 +14,7 @@ public class Clinica {
         nPacientes = 0;
     }
 
-    public void adicionarNovoPaciente() {
+    public static void adicionarNovoPaciente() {
         if (nPacientes < pacientes.length) {
             pacientes[nPacientes++] = new Paciente(codigo, nome, sexo, peso, altura,  idade);
             System.out.println("Novo paciente adicionado!");

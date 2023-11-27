@@ -1,18 +1,22 @@
 package Fund_Prog_S2.TrabalhoFinal;
 
-public class ListaPacientes {
-    private Paciente[] paciente;
-    private int tamanho;
 
-    public ListaPacientes(int capacidade) {
+public class ListaDePacientes {
+    private Paciente [] paciente;
+    private int tamanho;
+    private int proximoIndice;
+
+
+    public ListaDePacientes(int capacidade) {
         this.paciente = new Paciente[capacidade];
         this.tamanho = 0;
     }
 
     // Método que consulta um paciente por nome
-    public Paciente consultarPorNome(String nome) {
+    public Paciente consultarPorNome(String auxiliar) {
+        if (proximoIndice == 0) { return null; };
         for (int i = 0; i < tamanho; i++) {
-            if (paciente[i].getNome().equals(nome)) {
+            if (paciente[i].getNome().equalsIgnoreCase(auxiliar)) {
                 return paciente[i];
             }
         }
@@ -30,18 +34,21 @@ public class ListaPacientes {
     }
 
     // Método que mostra uma lista de todos os paciente com idade acima de um valor informado
-    public void listarPacientesAcimaIdade(int idadeMinima) {
-        for (int i = 0; i < tamanho; i++) {
+    public Paciente listarPacientesAcimaIdade(int idadeMinima) {
+         for (int i = 0; i < tamanho; i++) {
             if (paciente[i].getIdade() > idadeMinima) {
                 System.out.println(paciente[i]);
+                return paciente[i];
             }
         }
+        return null;
     }
 
-    // Método que lista todos os paciente
+    // Método que lista todos os pacientes
     public void listarTodosPacientes() {
+        System.out.println("Todos os Pacientes :");
         for (int i = 0; i < tamanho; i++) {
-            System.out.println(paciente[i]);
+            System.out.println("Código: " + paciente[i].getCodigo() + ", Nome: " + paciente[i].getNome() + ", Sexo: " + paciente[i].getSexo() + ", Idade: " + paciente[i].getIdade());
         }
     }
 
@@ -97,7 +104,7 @@ public class ListaPacientes {
     public void mostrarIMC(int codigoPaciente) {
         Paciente paciente = consultarPorCodigo(codigoPaciente);
         if (paciente != null) {
-            double imc = paciente.calcularIMC(paciente.peso, paciente.altura);
+            double imc = paciente.calcularIMC(paciente.getPeso(), paciente.getAltura());
             System.out.println("IMC do paciente: " + imc);
         } else {
             System.out.println("Paciente não encontrado.");

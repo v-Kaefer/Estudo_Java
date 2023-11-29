@@ -1,5 +1,3 @@
-package Fund_Prog_S2.TrabalhoFinal;
-
 /** Implemente a classe Paciente:
  os objetos dessa classe representam os pacientes de um médico endocrinologista.
 

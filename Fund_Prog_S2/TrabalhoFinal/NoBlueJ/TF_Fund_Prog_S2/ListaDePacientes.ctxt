@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=ListaDePacientes
+comment1.params=tamanho
+comment1.target=ListaDePacientes(int)
+comment10.params=codigoPaciente
+comment10.target=void\ alterarSexo(int)
+comment11.params=codigoPaciente
+comment11.target=void\ mostrarIMC(int)
+comment12.params=
+comment12.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=int\ getProximoIndice()
+comment3.params=paciente
+comment3.target=boolean\ cadastraNovoPaciente(Paciente)
+comment4.params=nomeAuxiliar
+comment4.target=Paciente\ consultarPorNome(java.lang.String)
+comment5.params=codigo
+comment5.target=Paciente\ consultarPorCodigo(int)
+comment6.params=idadeMinima
+comment6.target=Paciente[]\ listarPacientesAcimaIdade(int)
+comment7.params=
+comment7.target=void\ listarTodosPacientes()
+comment8.params=codigoPaciente
+comment8.target=void\ alterarPeso(int)
+comment9.params=codigoPaciente
+comment9.target=void\ alterarAltura(int)
+numComments=13

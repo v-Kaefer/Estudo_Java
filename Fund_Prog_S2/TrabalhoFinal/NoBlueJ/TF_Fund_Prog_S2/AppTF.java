@@ -1,5 +1,3 @@
-package Fund_Prog_S2.TrabalhoFinal;
-
 import java.util.Scanner;
 /** A seguir, implemente uma Lista de Pacientes. Defina as operações necessárias para manipular essa lista. 
  * @author Vitor K Guttler

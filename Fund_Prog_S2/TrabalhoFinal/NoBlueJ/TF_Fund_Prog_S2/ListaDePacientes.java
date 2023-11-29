@@ -1,6 +1,3 @@
-package Fund_Prog_S2.TrabalhoFinal;
-
-
 public class ListaDePacientes {
     private Paciente[] listaPacientes;
     private int proximoIndice;
@@ -67,6 +64,12 @@ public class ListaDePacientes {
     }
 
 
+
+
+
+
+
+
     // Método que lista todos os pacientes
     public void listarTodosPacientes() {
         System.out.println("Todos os Pacientes :");
@@ -74,6 +77,7 @@ public class ListaDePacientes {
             System.out.println("Código: " + listaPacientes[i].getCodigo() + ", Nome: " + listaPacientes[i].getNome() + ", Sexo: " + listaPacientes[i].getSexo() + ", Idade: " + listaPacientes[i].getIdade());
         }
     }
+
 
 
     // Método que altera o peso de um determinado paciente, informando o seu código
